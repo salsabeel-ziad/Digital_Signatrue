@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&family=Arvo:ital,wght@0,700;1,400&family=Cookie&family=Kanit:wght@100&family=Khand&family=Londrina+Solid:wght@300;900&family=Rubik&display=swap"
+      rel="stylesheet"
+    />
+    <title>Digital Signature System</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Sign Your Message</h2>
+      <form id="form">
+        <label for="inputText">Enter Your Message:</label>
+        <input type="text" id="inputText" name="inputText" required />
+        <button type="submit" value="Sign">Sign The Message</button>
+      </form>
+    </div>
+
+    
+    <script type="text/javascript">
+      let form = document.getElementById("form");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        let inputText = document.getElementById("inputText").value;
+        console.log(inputText);
+        let signature = sign(inputText);
+        console.log(printsSignature());
+      });
+      </script>
+      <script src="Digital_Signatrue.js" defer></script>
+
+  </body>
+</html>

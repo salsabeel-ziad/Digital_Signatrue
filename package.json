@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build": "Digital_Signatrue.js"
+},
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "crypto-js": "^4.1.1"
+  }
+}
